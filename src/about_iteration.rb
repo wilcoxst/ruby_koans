@@ -81,8 +81,20 @@ class AboutIteration < Neo::Koan
   end
 
   def test_inject_will_blow_your_mind
+    result = [2, 3, 4].inject { |sum, item| sum + item }
+    assert_equal __(9), result
+
     result = [2, 3, 4].inject(0) { |sum, item| sum + item }
     assert_equal __(9), result
+
+    result = [2, 3, 4].inject(1) { |sum, item| sum + item }
+    assert_equal __(9), result
+
+    result2 = [2, 3, 4].inject { |product, item| product * item }
+    assert_equal __(24), result2
+
+    result2 = [2, 3, 4].inject(0) { |product, item| product * item }
+    assert_equal __(24), result2
 
     result2 = [2, 3, 4].inject(1) { |product, item| product * item }
     assert_equal __(24), result2
