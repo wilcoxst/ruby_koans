@@ -79,6 +79,11 @@ class AboutBlocks < Neo::Koan
     result = method_with_block_arguments(&make_upper)
     assert_equal __("JIM"), result
   end
+  
+  def test_blocks_are_objects
+    square = lambda { |x| x * x }
+    assert_equal __, square.class
+  end
 
   # ------------------------------------------------------------------
 
