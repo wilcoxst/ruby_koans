@@ -117,7 +117,7 @@ end
 # The following code is to support the testing of the Proxy class.  No
 # changes should be necessary to anything below this comment.
 
-# Example class using in the proxy testing above.
+# Example class used in the proxy testing above.
 class Television
   attr_accessor :channel
 
